@@ -1,10 +1,11 @@
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: sans-serif;
-} 
-nav{
+}
+
+nav {
   display: flex;
   height: 80px;
   width: 100%;
@@ -14,20 +15,24 @@ nav{
   padding: 0 50px 0 100px;
   flex-wrap: wrap;
 }
-nav .logo{
+
+nav .logo {
   color: #fff;
   font-size: 35px;
   font-weight: 600;
 }
-nav ul{
+
+nav ul {
   display: flex;
   flex-wrap: wrap;
   list-style: none;
 }
-nav ul li{
+
+nav ul li {
   margin: 0 5px;
 }
-nav ul li a{
+
+nav ul li a {
   color: #f2f2f2;
   text-decoration: none;
   font-size: 18px;
@@ -37,33 +42,41 @@ nav ul li a{
   letter-spacing: 1px;
   transition: all 0.3s ease;
 }
+
 nav ul li a.active,
-nav ul li a:hover{
+nav ul li a:hover {
   color: #111;
   background: #fff;
 }
-nav .menu-btn i{
+
+nav .menu-btn i {
   color: #fff;
   font-size: 22px;
   cursor: pointer;
   display: none;
+  transform: rotate(180deg);
 }
-input[type="checkbox"]{
+
+input[type="checkbox"] {
   display: none;
 }
-@media (max-width: 1000px){
-  nav{
+
+@media (max-width: 1000px) {
+  nav {
     padding: 0 40px 0 50px;
   }
 }
+
 @media (max-width: 920px) {
-  nav .menu-btn i{
+  nav .menu-btn i {
     display: block;
   }
-  #click:checked ~ .menu-btn i:before{
+
+  #click:checked~.menu-btn i:before {
     content: "\f00d";
   }
-  nav ul{
+
+  nav ul {
     position: fixed;
     top: 80px;
     left: -100%;
@@ -74,30 +87,36 @@ input[type="checkbox"]{
     display: block;
     transition: all 0.3s ease;
   }
-  #click:checked ~ ul{
+
+  #click:checked~ul {
     left: 0;
   }
-  nav ul li{
+
+  nav ul li {
     width: 100%;
     margin: 40px 0;
   }
-  nav ul li a{
+
+  nav ul li a {
     width: 100%;
     margin-left: -100%;
     display: block;
     font-size: 20px;
     transition: 0.6s cubic-bezier(0.68, -0.55, 0.265, 1.55);
   }
-  #click:checked ~ ul li a{
+
+  #click:checked~ul li a {
     margin-left: 0px;
   }
+
   nav ul li a.active,
-  nav ul li a:hover{
+  nav ul li a:hover {
     background: none;
     color: cyan;
   }
 }
-.content{
+
+.content {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -108,7 +127,8 @@ input[type="checkbox"]{
   padding: 0 30px;
   color: #ca5d5d;
 }
-.content div{
+
+.content div {
   font-size: 40px;
   font-weight: 700;
 }
@@ -116,25 +136,37 @@ input[type="checkbox"]{
 
 /* @import url('https://fonts.googleapi.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap'); */
 
-::selection{
+::selection {
   background: #ddc37c;
   color: #fff;
 }
-html,body{
+
+html,
+body {
   display: grid;
   height: 100%;
   place-items: center;
   background: #ddc37c;
 }
-.container{
+
+.container {
   max-width: 1100px;
   display: flex;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
-  flex-wrap:wrap;
+  flex-wrap: wrap;
   padding: 20px;
 }
-.container .box{
+
+.container.grid {
+  display: grid;
+}
+
+.container.grid .box {
+  width: 100%;
+}
+
+.container .box {
   width: calc(33% - 10px);
   background: #fff;
   display: flex;
@@ -143,13 +175,16 @@ html,body{
   align-items: center;
   padding: 20px 30px;
   border-radius: 5px;
+  margin: 10px 0;
 }
-.box .quote i{
-margin-top: 10px;
-font-size: 45px;
-color: #17c0eb
+
+.box .quote i {
+  margin-top: 10px;
+  font-size: 45px;
+  color: #17c0eb
 }
-.container .box .image{
+
+.container .box .image {
   margin: 10px 0;
   height: 150px;
   width: 150px;
@@ -157,34 +192,38 @@ color: #17c0eb
   padding: 3px;
   border-radius: 50%;
 }
-.box .image img{
+
+.box .image img {
   height: 100%;
   width: 100%;
   border-radius: 50%;
   object-fit: cover;
   border: 2px solid #fff;
 }
-.box p{
+
+.box p {
   text-align: justify;
   margin-top: 8px;
   font-size: 16px;
   font-weight: 400;
 }
-.box .name{
+
+.box .name {
   margin: 10px 0 3px 0;
   color: #8e44ad;
   font-size: 18px;
   font-weight: 600;
 }
 
-.btns{
+.btns {
   margin-top: 20px;
   margin-bottom: 5px;
   display: flex;
   justify-content: space-between;
   width: 100%;
 }
-.btns button{
+
+.btns button {
   background: #8e44ad;
   width: 100%;
   padding: 9px 0px;
@@ -197,29 +236,60 @@ color: #17c0eb
   color: #8e44ad;
   transition: all 0.3s linear;
 }
-.btns button:first-child{
+
+.btns button:first-child {
   background: none;
   margin-right: 5px;
 }
-.btns button:last-child{
+
+.btns button:last-child {
   color: #fff;
   margin-left: 5px;
 }
-.btns button:first-child:hover{
+
+.btns button:first-child:hover {
   background: #8e44ad;
   color: #fff;
 }
-.btns button:hover{
+
+.btns button:hover {
   color: #fff;
 }
-@media (max-width:1045px){
-  .container .box{
+
+@media (max-width:1045px) {
+  .container .box {
     width: calc(50% - 10px);
     margin-bottom: 20px;
   }
 }
-@media (max-width:710px){
-  .container .box{
+
+@media (max-width:710px) {
+  .container .box {
     width: 100%;
   }
+}
+
+.buttons {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.buttons i {
+  color: #000;
+  font-size: 32px;
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.buttons i:hover {
+  color: #8e44ad;
+}
+
+.buttons i.active {
+  color: #8e44ad;
 }
